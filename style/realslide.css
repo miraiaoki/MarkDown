@@ -1,0 +1,63 @@
+/* @theme realslide */
+
+@import "default";
+
+section {
+  font-family: "Hiragino Sans", "Yu Gothic", sans-serif;
+  background: #ffffff;
+  color: #000;
+  padding: 80px 60px;
+  position: relative;
+}
+
+/* タイトル中央配置 */
+h1 {
+  font-size: 2.8em;
+  text-align: center;
+  margin-top: 200px;
+  padding: 60px 0;
+}
+
+/* サブタイトル */
+h2 {
+  text-align: center;
+  font-size: 1.6em;
+  margin-top: 40px;
+  padding: 40px 0;
+}
+
+/* h3 をスライド左上に固定 */
+section h3:first-of-type {
+  position: absolute;
+  top: 40px; /* 上からの距離（調整可能） */
+  left: 60px; /* 左からの距離（調整可能） */
+  margin: 0;
+  padding: 0;
+  font-size: 1.3em; /* タイトルっぽく */
+  border-bottom: 1px solid #ccc;
+  font-weight: 600;
+}
+
+/* h3 が本文の邪魔をしないように本文を下げる */
+section {
+  padding-top: 100px; /* h3 の高さぶん余白を作る */
+  position: relative; /* 子要素の absolute の基準にするため必須 */
+}
+
+/* 右上ロゴ */
+section::before {
+  content: "";
+  position: absolute;
+  top: 40px;
+  right: 60px;
+  width: 120px;
+  height: 40px;
+  background-image: url("style/Logo.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+/* フォント調整 */
+p {
+  font-size: 1.2em;
+}

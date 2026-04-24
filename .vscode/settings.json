@@ -1,0 +1,5 @@
+{
+  "markdown-preview-enhanced.hideDefaultVSCodeMarkdownPreviewButtons": false,
+  "markdown.marp.themes": ["./style/realslide.css"],
+  "markdown.marp.enableHtml": true
+}
